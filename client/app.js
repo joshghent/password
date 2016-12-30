@@ -23,6 +23,8 @@ const getNumberOfWordsSelected = () => {
 
 const populatePasswordField = (data) => {
   data = JSON.parse(data);
+
+  document.getElementById('password').value = data.password;
 }
 
 window.onload = () => {
