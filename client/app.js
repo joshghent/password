@@ -17,7 +17,15 @@ const request = (url, callback, callbackArgs) => {
   return xhr;
 }
 
+const getNumberOfWordsSelected = () => {
+  return document.getElementById('numberOfWords').value;
+}
+
+const populatePasswordField = (data) => {
+  data = JSON.parse(data);
+}
+
 window.onload = () => {
   const url = document.location.href + 'api/' + getNumberOfWordsSelected();
-  request(url)
+  request(url, populatePasswordField);
 }
