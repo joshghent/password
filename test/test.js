@@ -13,7 +13,7 @@ chai.use(ChaiHttp);
 describe('Password API', () => {
   it('Will return a password given a number of words', (done) => {
     request(url)
-      .put('/api/4')
+      .put('/4')
       .expect('Content-Type', '/json/')
       .expect(200)
       .end((err, res) => {

@@ -28,6 +28,6 @@ const populatePasswordField = (data) => {
 }
 
 window.onload = () => {
-  const url = document.location.href + 'api/' + getNumberOfWordsSelected();
+  const url = document.location.href + getNumberOfWordsSelected();
   request(url, populatePasswordField);
 }

@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // Route API calls to the api
-app.use('/api/:length', api);
+app.use('/:length', api);
 
 // Start skynet
 http.listen(port, () => {
