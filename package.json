@@ -11,5 +11,8 @@
   },
   "scripts": {
     "start": "node server.js"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
   }
 }

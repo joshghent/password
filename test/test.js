@@ -8,7 +8,7 @@ const request = require('supertest');
 const assert = require('assert');
 const url = 'http://localhost:' + Number(process.env.PORT || 6969);
 
-chai.use(ChaiHttp);
+chai.use(chaiHttp);
 
 describe('Password API', () => {
   it('Will return a password given a number of words', (done) => {
