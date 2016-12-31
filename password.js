@@ -3,6 +3,8 @@
 const randomWords = require('random-words');
 
 function randomizeCasing (str) {
+  // Create a new array that will store the new string
+  // This was because reassigning the invidividual string chars triggered an error
   let newChars = [];
   for (let i = 0; i < str.length; i += 1) {
     if (Math.random() > 0.5) {
