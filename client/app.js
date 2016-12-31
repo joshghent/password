@@ -58,6 +58,18 @@ window.onload = () => {
   // Onload get a new password
   getNewPassword();
 
+  const copyPassword = new Clipboard('#copyPassword');
+  copyPassword.on('success', (e) => {
+
+    document.getElementById('copyPassword').value = "Copied!";
+    document.getElementById('copyPassword').classList.toggle('successBtn');
+
+    setTimeout(() => {
+      document.getElementById('copyPassword').value = "Copy to Clipboard";
+      document.getElementById('copyPassword').classList.toggle('successBtn');
+    }, 700);
+  });
+
   // Add a click handler to the new password button
   // This will generate a new password everytime the button is clicked
   document.getElementById('newPassword').addEventListener('click', getNewPassword);

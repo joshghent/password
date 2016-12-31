@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="skeleton.css" rel="stylesheet">
+    <style>
+      .successBtn {
+        color: white !important;
+        background-color: #8BC34A !important;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -18,7 +24,7 @@
         <div class="row">
           <input class="u-full-width" type="text" id="password" spellcheck="false"/>
           <input class="button-primary" type="button" id="newPassword" value="Give me a password!">
-          <!--<input class="button-anchor" type="button" id="copyPassword" value="Copy to Clipboard">-->
+          <input class="button-anchor" type="button" id="copyPassword" value="Copy to Clipboard" data-clipboard-target="#password">
         </div>
       </div>
     </div>
