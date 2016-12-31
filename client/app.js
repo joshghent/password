@@ -27,7 +27,13 @@ const populatePasswordField = (data) => {
   document.getElementById('password').value = data.password;
 }
 
-window.onload = () => {
+const getNewPassword = () => {
   const url = document.location.href + getNumberOfWordsSelected();
   request(url, populatePasswordField);
+}
+
+window.onload = () => {
+  getNewPassword();
+
+  document.getElementById('newPassword').addEventListener('click', getNewPassword);
 }
