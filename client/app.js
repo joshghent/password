@@ -35,12 +35,23 @@ const populatePasswordField = (data) => {
   document.getElementById('password').value = data.password;
 }
 
+const buildAPIUrl = () => {
+  let url = document.location.href + getNumberOfWordsSelected();
+
+  const mixCasing = document.getElementById('mixCasing').checked;
+  const includeNumbers = document.getElementById('includeNumbers').checked;
+  const includeSpecialChars = document.getElementById('includeSpecialChars').checked;
+  
+  url += '?mixCasing=' + mixCasing + '&includeNumbers=' + includeNumbers + '&includeSpecialChars=' + includeSpecialChars;
+
+  return url;
+}
+
 // Calls the generate password API
 // Called onload and when the generate password button is clicked
 // It has a callback of populatePasswordField
 const getNewPassword = () => {
-  const url = document.location.href + getNumberOfWordsSelected();
-  request(url, populatePasswordField);
+  request(buildAPIUrl(), populatePasswordField);
 }
 
 window.onload = () => {
