@@ -53,8 +53,37 @@ function addNumbersToString (str) {
   return newChars.join('');
 }
 
+function getRandomSpecialChar () {
+  const specialChars = ['!', '@', '#', '$', '%', '^', '&', '*', '-', ':'];
+
+  return specialChars[Math.floor(Math.random() * specialChars.length)];
+}
+
 function addSpecialCharsToString (str) {
-  return str;
+  const commonKeyMap = {
+    'a' : '@',
+    'i' : '!',
+    'h' : '#',
+    's' : '$'
+  };
+
+  let specialCharsRemaining = Math.floor(0.05 * str.length);
+
+  if (specialCharsRemaining === 0) {
+    specialCharsRemaining = 1;
+  }
+
+  let newChars = [];
+
+  for (let i = 0; i < str.length; i += 1) {
+    newChars.push(str[i]);
+  }
+
+  if (specialCharsRemaining > 0) {
+    newChars.push(getRandomSpecialChar());
+  }
+
+  return newChars.join('');
 }
 
 function generatePassword(req, res) {
