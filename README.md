@@ -2,6 +2,8 @@
 
 A password generator based on https://xkcd.com/936/
 
+See it live here: https://password.joshghent.com/
+
 ### Features
 * Generate up to 10 english words to use as a password
 * Randomize casing of the password
