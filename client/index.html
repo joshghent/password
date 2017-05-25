@@ -10,6 +10,11 @@
         color: white !important;
         background-color: #8BC34A !important;
       }
+
+      label {
+        display: inline-block;
+        font-weight: normal;
+      }
     </style>
   </head>
   <body>
@@ -46,16 +51,16 @@
           </select>
         </div>
         <div class="row">
-          <input type="checkbox" id="mixCasing">
-          <span>Mix UPPERCASE and lowercase</span>
+          <input type="checkbox" id="mixCasing" checked>
+          <label for="mixCasing">Mix UPPERCASE and lowercase</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="includeNumbers">
-          <span>Include Numbers</span>
+          <input type="checkbox" id="includeNumbers" checked>
+          <label for="includeNumbers">Include Numbers</label>
         </div>
         <div class="row">
-          <input type="checkbox" id="includeSpecialChars">
-          <span>Include Special Characters</span>
+          <input type="checkbox" id="includeSpecialChars" checked>
+          <label for="includeSpecialChars">Include Special Characters</label>
         </div>
       </div>
     </div>
