@@ -11,11 +11,13 @@ const Rollbar = require('rollbar');
 const rollbar = new Rollbar(process.env.ROLLBAR_SERVER_SECRET);
 const httpsRedirect = require('express-https-redirect');
 const helmet = require('helmet');
+const compression = require('compression')
 
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(rollbar.errorHandler());
 
 app.use('/', httpsRedirect());
+app.use(compression());
 app.use(helmet());
 
 // Homepage
