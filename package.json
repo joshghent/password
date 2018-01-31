@@ -15,7 +15,8 @@
     "rollbar": "2.3.7"
   },
   "scripts": {
-    "start": "node server.js"
+		"start": "node server.js",
+		"test": "mocha"
   },
   "devDependencies": {
     "asset": "0.4.13",
