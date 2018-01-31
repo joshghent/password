@@ -19,5 +19,17 @@ describe('Password API', () => {
 				expect(res).to.have.status(200)
         done();
       });
-  });
+	});
+});
+
+describe('Password Options', () => {
+	it('Capital Letters', (done) => {
+		done();
+	});
+	it('Numbers', (done) => {
+		done();
+	});
+	it('Special Character', (done) => {
+		done();
+	});
 });
