@@ -8,10 +8,13 @@ const port = Number(process.env.PORT || 6969);
 const http = require('http').Server(app);
 const api = require('./password.js');
 const Rollbar = require('rollbar');
-const rollbar = new Rollbar('');
+const rollbar = new Rollbar(process.env.ROLLBAR_SERVER_SECRET);
+const httpsRedirect = require('express-https-redirect');
 
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(rollbar.errorHandler());
+
+app.use('/', httpsRedirect());
 
 // Homepage
 app.get('/', (req, res) => {
@@ -23,7 +26,6 @@ app.use('/:length', api);
 
 // Start skynet
 http.listen(port, () => {
-	rollbar.info('Test');
 	console.log('Listening on: ' + port);
 });
 
