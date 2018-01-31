@@ -18,10 +18,10 @@
     "start": "node server.js"
   },
   "devDependencies": {
-		"chai": "3.5.0",
-		"supertest": "3.0.0",
-		"mocha": "5.0.0",
-		"asset": "0.4.13",
-    "chai-http": "3.0.0"
+    "asset": "0.4.13",
+    "chai": "3.5.0",
+    "chai-http": "3.0.0",
+    "mocha": "5.0.0",
+    "supertest": "3.0.0"
   }
 }
