@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
+app.get('/favicons/:file', (req, res) => {
+	res.sendFile(path.join(__dirname + '/client/favicons/' + req.params.file));
+});
+
 // Route API calls to the api
 app.use('/:length', api);
 
