@@ -9,5 +9,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+	"display": "standalone",
+	"start_url": "https://password.joshghent.com",
+	"orientation": "portrait"
 }
