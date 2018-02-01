@@ -41,7 +41,7 @@ const buildAPIUrl = () => {
   const mixCasing = document.getElementById('mixCasing').checked;
   const includeNumbers = document.getElementById('includeNumbers').checked;
   const includeSpecialChars = document.getElementById('includeSpecialChars').checked;
-  
+
   url += '?mixCasing=' + mixCasing + '&includeNumbers=' + includeNumbers + '&includeSpecialChars=' + includeSpecialChars;
 
   return url;
@@ -62,11 +62,11 @@ window.onload = () => {
   copyPassword.on('success', (e) => {
 
     document.getElementById('copyPassword').value = "Copied!";
-    document.getElementById('copyPassword').classList.toggle('successBtn');
+    document.getElementById('copyPassword').classList.toggle('btn-success');
 
     setTimeout(() => {
       document.getElementById('copyPassword').value = "Copy to Clipboard";
-      document.getElementById('copyPassword').classList.toggle('successBtn');
+      document.getElementById('copyPassword').classList.toggle('btn-success');
     }, 700);
   });
 
