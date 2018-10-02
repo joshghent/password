@@ -11,3 +11,5 @@ I have no claim for the passwords generated to be cryptographically secure.
 I do not take responsiblity for any identity theft or any other bad things.
 
 Generated passwords are NOT and will NEVER be stored on our servers.
+
+TEST!
