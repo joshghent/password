@@ -20,12 +20,8 @@
           "api": "./src/api",
           "config": "./src/config",
           "Common": "./src/Common",
-          "Auth": "./src/Auth",
           "Navigation": "./src/Navigation",
-          "Redux": "./src/Redux",
-          "StyleGuide": "./src/StyleGuide",
-          "VolunteerApplication": "./src/VolunteerApplication",
-          "VolunteerInterest": "./src/VolunteerInterest"
+          "Redux": "./src/Redux"
         }
       }
     ]
