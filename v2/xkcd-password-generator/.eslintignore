@@ -1,0 +1,6 @@
+src/registerServiceWorker.js
+config
+**/*.png
+**/*.ttf
+**/*.css
+**/*.md

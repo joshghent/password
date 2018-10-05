@@ -1,0 +1,33 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "react-app"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "emotion",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "api": "./src/api",
+          "config": "./src/config",
+          "Common": "./src/Common",
+          "Auth": "./src/Auth",
+          "Navigation": "./src/Navigation",
+          "Redux": "./src/Redux",
+          "StyleGuide": "./src/StyleGuide",
+          "VolunteerApplication": "./src/VolunteerApplication",
+          "VolunteerInterest": "./src/VolunteerInterest"
+        }
+      }
+    ]
+  ]
+}
