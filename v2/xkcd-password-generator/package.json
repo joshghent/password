@@ -1,6 +1,6 @@
 {
-    "name": "kennedy-brothers-construction",
-    "version": "1.0.0",
+    "name": "xkcd-password-generator",
+    "version": "2.0.0",
     "private": true,
     "engines": {
         "node": ">=10.8.0",
@@ -9,9 +9,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://gitlab.com/kb-construction/kb-construction-client/tree/develop"
+        "url": "https://github.com/joshghent/password"
     },
-    "bugs": "https://gitlab.com/kb-construction/kb-construction-client/issues",
+    "bugs": "https://github.com/joshghent/password/issues",
     "license": "WTFPL - see /LICENSE.md",
     "dependencies": {
         "autoprefixer": "7.1.6",

@@ -1,14 +1,20 @@
-# Kennedy Brother's Construction - Website Client
+# XKCD-PASSWORD-GENERATOR
 
-A single page, reactive, javascript web app for Kennedy Brother's Construction.
+A password generator based on [#936](https://xkcd.com/936/)
+
+See it live here: https://passwords.joshghent.com/
+
+> We have no claim for the passwords generated to be cryptographically secure. We do not take responsiblity for any identity theft or any other bad things.
+
+Generated passwords are NOT and will NEVER be stored on our servers.
 
 Please read through this entire document to learn about getting started and maintaining the project.
 
 ## Getting Started
 
 - Clone the project to a local workspace of your choice. SSH Key method is reccomended.
-- **`SSH`**: `git@gitlab.com:kb-construction/kb-construction-client.git`
-- :point_right:[LEARN MORE](https://gitlab.com/help/ssh/README#gitlab-and-ssh-keys) about creating SSH keys in GitLab.
+- **`SSH`**: `git@github.com:joshghent/password.git`
+- :point_right:[LEARN MORE](https://help.github.com/articles/connecting-to-github-with-ssh/) about creating SSH keys in GitLab.
 
 ### Prerequisites
 
