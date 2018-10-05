@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { Form, Message } from "semantic-ui-react";
 
+import { TOGGLE_ACTION_MAP } from "Home/constants";
 import withStyles from "Common/components/withStyles";
 import stylesGenerator from "./styles";
 
@@ -20,7 +21,11 @@ class WelcomeView extends PureComponent {
     includeSpecialChars: PropTypes.bool.isRequired,
     actions: PropTypes.shape({
       emitIsLoading: PropTypes.func.isRequired,
-      emitShowCopiedMessage: PropTypes.func.isRequired
+      emitShowCopiedMessage: PropTypes.func.isRequired,
+      emitNumWordsChanged: PropTypes.func.isRequired,
+      emitMixCaseChanged: PropTypes.func.isRequired,
+      emitIncludeNumbersChanged: PropTypes.func.isRequired,
+      emitSpecialCharsChanged: PropTypes.func.isRequired
     }).isRequired
   };
 
@@ -39,6 +44,38 @@ class WelcomeView extends PureComponent {
     actions.emitShowCopiedMessage({ showCopiedMessage: true });
 
     setTimeout(this.dismissMessage, 3000);
+  };
+
+  toggleChangedHandler = e => {
+    const {
+      actions,
+      mixCase,
+      includeNumbers,
+      includeSpecialChars
+    } = this.props;
+
+    const dataType = e.currentTarget.getAttribute("data-type");
+    const actionType = TOGGLE_ACTION_MAP[dataType];
+
+    switch (dataType) {
+      case "mixCase":
+        actions[actionType]({ mixCase: !mixCase });
+        break;
+      case "includeNumbers":
+        actions[actionType]({ includeNumbers: !includeNumbers });
+        break;
+      case "includeSpecialChars":
+        actions[actionType]({ includeSpecialChars: !includeSpecialChars });
+        break;
+      default:
+        break;
+    }
+  };
+
+  numWordsChangedHandler = (e, { value }) => {
+    const { actions } = this.props;
+    e.preventDefault();
+    actions.emitNumWordsChanged({ numWords: value });
   };
 
   dismissMessage = () => {
@@ -86,28 +123,35 @@ class WelcomeView extends PureComponent {
             <Form.Select
               fluid
               inline
-              defaultValue={numWords}
-              label="Number of words in password"
               options={options}
+              value={numWords}
               placeholder="Please Select"
+              label="Number of words in password"
+              onChange={this.numWordsChangedHandler}
             />
             <Form.Checkbox
               toggle
               checked={mixCase}
+              data-type="mixCase"
               label="Mix UPPERCASE and lowercase"
               className={computedStyles.checkbox}
+              onChange={this.toggleChangedHandler}
             />
             <Form.Checkbox
               toggle
               checked={includeNumbers}
+              data-type="includeNumbers"
               label="Include Numbers"
               className={computedStyles.checkbox}
+              onChange={this.toggleChangedHandler}
             />
             <Form.Checkbox
               toggle
               checked={includeSpecialChars}
+              data-type="includeSpecialChars"
               label="Include Special Characters"
               className={computedStyles.checkbox}
+              onChange={this.toggleChangedHandler}
             />
           </Form.Group>
           <Message
