@@ -4,6 +4,12 @@ import { withRouter } from "react-router-dom";
 import { Form, Message } from "semantic-ui-react";
 
 import { TOGGLE_ACTION_MAP } from "Home/constants";
+import {
+  addNumbersToString,
+  addSpecialCharsToString,
+  randomizeCase,
+  getRandomWords
+} from "Home/utils";
 import withStyles from "Common/components/withStyles";
 import stylesGenerator from "./styles";
 
@@ -12,8 +18,7 @@ class WelcomeView extends PureComponent {
     computedStyles: PropTypes.shape({
       checkbox: PropTypes.string.isRequired
     }).isRequired,
-    history: PropTypes.objectOf(PropTypes.object).isRequired,
-    isLoading: PropTypes.bool.isRequired,
+    password: PropTypes.string.isRequired,
     showCopiedMessage: PropTypes.bool.isRequired,
     numWords: PropTypes.number.isRequired,
     mixCase: PropTypes.bool.isRequired,
@@ -21,6 +26,7 @@ class WelcomeView extends PureComponent {
     includeSpecialChars: PropTypes.bool.isRequired,
     actions: PropTypes.shape({
       emitIsLoading: PropTypes.func.isRequired,
+      emitSetPassword: PropTypes.func.isRequired,
       emitShowCopiedMessage: PropTypes.func.isRequired,
       emitNumWordsChanged: PropTypes.func.isRequired,
       emitMixCaseChanged: PropTypes.func.isRequired,
@@ -29,11 +35,9 @@ class WelcomeView extends PureComponent {
     }).isRequired
   };
 
-  contactHandler = () => {
-    const { isLoading, actions, history } = this.props;
-    actions.emitIsLoading({ isLoading: !isLoading });
-    history.push("/contactUs");
-  };
+  componentDidMount() {
+    this.generatePassword();
+  }
 
   copyToClipboardHandler = () => {
     const { actions } = this.props;
@@ -44,6 +48,32 @@ class WelcomeView extends PureComponent {
     actions.emitShowCopiedMessage({ showCopiedMessage: true });
 
     setTimeout(this.dismissMessage, 3000);
+  };
+
+  generatePassword = () => {
+    const {
+      actions,
+      numWords,
+      mixCase,
+      includeNumbers,
+      includeSpecialChars
+    } = this.props;
+
+    let password = getRandomWords({ exactly: Number(numWords) }).join("");
+
+    if (mixCase) {
+      password = randomizeCase(password);
+    }
+
+    if (includeNumbers) {
+      password = addNumbersToString(password);
+    }
+
+    if (includeSpecialChars) {
+      password = addSpecialCharsToString(password);
+    }
+
+    actions.emitSetPassword({ password });
   };
 
   toggleChangedHandler = e => {
@@ -86,6 +116,7 @@ class WelcomeView extends PureComponent {
   render() {
     const {
       computedStyles,
+      password,
       showCopiedMessage,
       numWords,
       mixCase,
@@ -93,6 +124,7 @@ class WelcomeView extends PureComponent {
       includeSpecialChars
     } = this.props;
 
+    // @TODO: Move to Redux Initial State?
     const options = [
       { key: "1", text: "1", value: 1 },
       { key: "2", text: "2", value: 2 },
@@ -110,13 +142,25 @@ class WelcomeView extends PureComponent {
       <div>
         <Form>
           <Form.Group>
-            <Form.Input id="passwordField" placeholder="Password" width={12} />
+            <Form.Input
+              id="passwordField"
+              placeholder="Password"
+              width={8}
+              value={password}
+            />
             <Form.Button
               width={4}
-              content="Copy to Clipboard"
               icon="copy"
               labelPosition="right"
+              content="Copy to Clipboard"
               onClick={this.copyToClipboardHandler}
+            />
+            <Form.Button
+              width={4}
+              icon="detective"
+              labelPosition="right"
+              content="Generate Password"
+              onClick={this.generatePassword}
             />
           </Form.Group>
           <Form.Group widths="equal">

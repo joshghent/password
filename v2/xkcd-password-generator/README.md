@@ -14,7 +14,7 @@ Please read through this entire document to learn about getting started and main
 
 - Clone the project to a local workspace of your choice. SSH Key method is reccomended.
 - **`SSH`**: `git@github.com:joshghent/password.git`
-- :point_right:[LEARN MORE](https://help.github.com/articles/connecting-to-github-with-ssh/) about creating SSH keys in GitLab.
+- :point_right: [LEARN MORE](https://help.github.com/articles/connecting-to-github-with-ssh/) about creating SSH keys in GitLab.
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ Please read through this entire document to learn about getting started and main
 
 - To launch the webserver and serve the app locally, run `npm start` -or- `yarn start`
 
-- Drink Beer and get coding. :beers:
+- Drink Beer :beers:
 
 ## Running the tests
 

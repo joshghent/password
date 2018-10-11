@@ -4,6 +4,7 @@ import { handleActions, createAction } from "redux-actions";
  * ACTION TYPE CONSTANTS
  */
 const EMIT_IS_LOADING = "EMIT_IS_LOADING";
+const EMIT_SET_PASSWORD = "EMIT_SET_PASSWORD";
 const EMIT_MIX_CASE_CHANGED = "EMIT_MIX_CASE_CHANGED";
 const EMIT_NUM_WORDS_CHANGED = "EMIT_NUM_WORDS_CHANGED";
 const EMIT_SHOW_COPIED_MESSAGE = "EMIT_SHOW_COPIED_MESSAGE";
@@ -13,6 +14,7 @@ const EMIT_INCLUDE_NUMBERS_CHANGED = "EMIT_INCLUDE_NUMBERS_CHANGED";
 // INITIAL STATE
 const initialState = {
   isLoading: false,
+  password: "",
   showCopiedMessage: false,
   numWords: 4,
   mixCase: true,
@@ -24,6 +26,11 @@ const initialState = {
  * ACTIONS
  */
 export const emitIsLoading = createAction(EMIT_IS_LOADING, payload => payload);
+
+export const emitSetPassword = createAction(
+  EMIT_SET_PASSWORD,
+  payload => payload
+);
 
 export const emitShowCopiedMessage = createAction(
   EMIT_SHOW_COPIED_MESSAGE,
@@ -55,6 +62,10 @@ export const emitSpecialCharsChanged = createAction(
  */
 const handlers = {
   [EMIT_IS_LOADING]: (state, { payload }) => ({
+    ...state,
+    ...payload
+  }),
+  [EMIT_SET_PASSWORD]: (state, { payload }) => ({
     ...state,
     ...payload
   }),

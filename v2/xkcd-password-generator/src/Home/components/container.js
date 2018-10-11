@@ -6,6 +6,7 @@ import HomeController from "./controller";
 
 const mapStateToProps = ({ homeReducer, routerReducer }) => ({
   isLoading: homeReducer.isLoading,
+  password: homeReducer.password,
   showCopiedMessage: homeReducer.showCopiedMessage,
   numWords: homeReducer.numWords,
   mixCase: homeReducer.mixCase,
