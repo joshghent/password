@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import { Form, Message } from "semantic-ui-react";
+import { Form, Grid, Message } from "semantic-ui-react";
 
 import { TOGGLE_ACTION_MAP } from "Home/constants";
 import {
@@ -16,7 +16,9 @@ import stylesGenerator from "./styles";
 class WelcomeView extends PureComponent {
   static propTypes = {
     computedStyles: PropTypes.shape({
-      checkbox: PropTypes.string.isRequired
+      checkbox: PropTypes.string.isRequired,
+      controlContainer: PropTypes.string.isRequired,
+      buttonContainer: PropTypes.string.isRequired
     }).isRequired,
     password: PropTypes.string.isRequired,
     showCopiedMessage: PropTypes.bool.isRequired,
@@ -145,7 +147,7 @@ class WelcomeView extends PureComponent {
             <Form.Input
               id="passwordField"
               placeholder="Password"
-              width={8}
+              width={12}
               value={password}
             />
             <Form.Button
@@ -155,15 +157,11 @@ class WelcomeView extends PureComponent {
               content="Copy to Clipboard"
               onClick={this.copyToClipboardHandler}
             />
-            <Form.Button
-              width={4}
-              icon="detective"
-              labelPosition="right"
-              content="Generate Password"
-              onClick={this.generatePassword}
-            />
           </Form.Group>
-          <Form.Group widths="equal">
+          <Form.Group
+            widths="equal"
+            className={computedStyles.controlContainer}
+          >
             <Form.Select
               fluid
               inline
@@ -198,6 +196,20 @@ class WelcomeView extends PureComponent {
               onChange={this.toggleChangedHandler}
             />
           </Form.Group>
+          <Grid>
+            <Grid.Column
+              floated="right"
+              width={5}
+              className={computedStyles.buttonContainer}
+            >
+              <Form.Button
+                icon="detective"
+                labelPosition="right"
+                content="Generate Password"
+                onClick={this.generatePassword}
+              />
+            </Grid.Column>
+          </Grid>
           <Message
             visible={showCopiedMessage}
             success
