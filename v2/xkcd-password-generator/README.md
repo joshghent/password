@@ -61,6 +61,12 @@ Prettier IDE extensions:
 
 - [JetBrains](https://github.com/prettier/prettier#jetbrains)
 
+`@TODO` Explain what DUCKS pattern is
+
+`@TODO` Explain GIT Flow pattern
+
+`@TODO` Explain what emotion and `CSS in JS` is
+
 ## Deployment
 
 To create an optimized production build...
@@ -93,7 +99,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Burton Podczerwinski** - _Initial work_ - [BPod](https://github.com/bpod)
 
-`@TODO` ADD Contributors
+`@TODO` ADD Contributors and Maintainers
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -108,4 +114,4 @@ See the [LICENSE.md](COPYING.md) file for more details.
 
 ## Acknowledgments
 
-`@TODO` Add Acknowledgments here
+`@TODO` Add Acknowledgments and props here
