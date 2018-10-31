@@ -1,9 +1,9 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import { Grid, Segment, Header as Heading } from "semantic-ui-react";
+import { Header as Heading } from "semantic-ui-react";
 
-// import residential1 from "Common/assets/residential1_web.jpg";
+import XKCD_COMIC from "Common/assets/password_strength.png";
 
 import withStyles from "Common/components/withStyles";
 import stylesGenerator from "./styles";
@@ -31,15 +31,12 @@ class AboutView extends PureComponent {
     const { computedStyles, title } = this.props;
 
     return (
-      <Grid columns={1}>
-        <Grid.Column>
-          <Segment>
-            <Heading as="h1" className={computedStyles.heading}>
-              {title}
-            </Heading>
-          </Segment>
-        </Grid.Column>
-      </Grid>
+      <div>
+        <Heading as="h1" className={computedStyles.heading}>
+          {title}
+        </Heading>
+        <img src={XKCD_COMIC} alt="xkcd-936" />
+      </div>
     );
   }
 }

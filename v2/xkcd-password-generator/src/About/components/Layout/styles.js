@@ -1,10 +1,10 @@
-// import { css } from "emotion";
+import { css } from "emotion";
 
 const stylesGenerator = () => ({
-  // panel: css`
-  //   margin: 0 auto;
-  //   width: 50%;
-  // `
+  viewPanel: css`
+    margin: 1.5em auto 1.5em;
+    width: 66%;
+  `
 });
 
 export default stylesGenerator;
