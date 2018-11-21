@@ -12,8 +12,9 @@ const stylesGenerator = () => ({
     padding: 10px;
     a {
       color: #032933;
+      font-weight: 900 !important;
       &:hover {
-        color: #fff;
+        color: #2185d0;
       }
     }
   `

@@ -11,14 +11,14 @@ import store from "config/store";
 import { ROUTES } from "Navigation/constants";
 import NavigationContainer from "Navigation/components/container";
 import HomeContainer from "Home/components/container";
-// import AboutContainer from "About/components/container";
+import AboutContainer from "About/components/container";
 import AppWrapper from "./AppWrapper";
 
 const routes = (
   <NavigationContainer>
     <Switch>
       <Route path={ROUTES.HOME} component={HomeContainer} />
-      {/* <Route path={ROUTES.ABOUT} component={AboutContainer} /> */}
+      <Route path={ROUTES.ABOUT} component={AboutContainer} />
       <Redirect from={ROUTES.ROOT} to={ROUTES.HOME} />
     </Switch>
   </NavigationContainer>
