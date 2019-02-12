@@ -8,7 +8,7 @@ See it live here: https://passwords.joshghent.com/
 
 Generated passwords are NOT and will NEVER be stored on our servers.
 
-Please read through this entire document to learn about getting started and maintaining the project.
+Please read through this entire document to learn about getting started.
 
 ## Getting Started
 
@@ -41,7 +41,9 @@ This project uses `Jest` for unit tests. Linting is performed by both `ESLint` a
 Give an example
 ```
 
-### Linting and Coding Style
+### Linting and Code Style
+
+#### Linting
 
 - ESLint can be run with `yarn lint`.
 
@@ -60,6 +62,20 @@ Prettier IDE extensions:
 - [Sublime](https://packagecontrol.io/packages/JsPrettier)
 
 - [JetBrains](https://github.com/prettier/prettier#jetbrains)
+
+#### Code Style
+
+- This project follows the Ducks pattern for naming and convention.
+
+  - [Learn More About Ducks](https://github.com/erikras/ducks-modular-redux)
+
+- For version control, we follow a GIT FLOW pattern.
+
+  - [Learn More About GitFlow](https://nvie.com/posts/a-successful-git-branching-model/)
+  - [Learn More About Contributing](CONTRIBUTING.md)
+
+- For style, we use a CSS-in-JS library called Emotion.
+  - [Learn More About Emotion](https://github.com/emotion-js/emotion)
 
 ## Deployment
 
@@ -93,7 +109,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Burton Podczerwinski** - _Initial work_ - [BPod](https://github.com/bpod)
 
-`@TODO` ADD Contributors
+`@TODO` ADD Contributors and Maintainers
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -108,4 +124,4 @@ See the [LICENSE.md](COPYING.md) file for more details.
 
 ## Acknowledgments
 
-`@TODO` Add Acknowledgments here
+[Josh Ghent](https://github.com/joshghent)
