@@ -8,7 +8,7 @@ See it live here: https://passwords.joshghent.com/
 
 Generated passwords are NOT and will NEVER be stored on our servers.
 
-Please read through this entire document to learn about getting started and maintaining the project.
+Please read through this entire document to learn about getting started.
 
 ## Getting Started
 
@@ -41,7 +41,9 @@ This project uses `Jest` for unit tests. Linting is performed by both `ESLint` a
 Give an example
 ```
 
-### Linting and Coding Style
+### Linting and Code Style
+
+#### Linting
 
 - ESLint can be run with `yarn lint`.
 
@@ -61,11 +63,19 @@ Prettier IDE extensions:
 
 - [JetBrains](https://github.com/prettier/prettier#jetbrains)
 
-`@TODO` Explain what DUCKS pattern is
+#### Code Style
 
-`@TODO` Explain GIT Flow pattern
+- This project follows the Ducks pattern for naming and convention.
 
-`@TODO` Explain what emotion and `CSS in JS` is
+  - [Learn More About Ducks](https://github.com/erikras/ducks-modular-redux)
+
+- For version control, we follow a GIT FLOW pattern.
+
+  - [Learn More About GitFlow](https://nvie.com/posts/a-successful-git-branching-model/)
+  - [Learn More About Contributing](CONTRIBUTING.md)
+
+- For style, we use a CSS-in-JS library called Emotion.
+  - [Learn More About Emotion](https://github.com/emotion-js/emotion)
 
 ## Deployment
 
@@ -114,4 +124,4 @@ See the [LICENSE.md](COPYING.md) file for more details.
 
 ## Acknowledgments
 
-`@TODO` Add Acknowledgments and props here
+[Josh Ghent](https://github.com/joshghent)
