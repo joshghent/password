@@ -18,8 +18,8 @@ const stylesGenerator = () => ({
 
   navContainer: css`
     position: absolute;
-    top: 0;
-    right: 10%;
+    top: 5%;
+    right: 20%;
   `
 });
 

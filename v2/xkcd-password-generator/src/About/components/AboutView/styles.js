@@ -1,8 +1,9 @@
 import { css } from "emotion";
 
 const stylesGenerator = () => ({
-  heading: css`
-    color: pink;
+  comic: css`
+    display: flex;
+    margin: 20px auto 0 auto;
   `
 });
 

@@ -9,18 +9,23 @@ import stylesGenerator from "./styles";
 const Links = ({ computedStyles }) => (
   <ul className={computedStyles.nav}>
     <li className={computedStyles.navItem}>
-      <NavLink to={ROUTES.HOME}>Home</NavLink>
+      <NavLink to={ROUTES.HOME} activeClassName={computedStyles.navItemActive}>
+        Home
+      </NavLink>
     </li>
     <li className={computedStyles.navItem}>
-      <NavLink to={ROUTES.ABOUT}>About Us</NavLink>
+      <NavLink to={ROUTES.ABOUT} activeClassName={computedStyles.navItemActive}>
+        About
+      </NavLink>
     </li>
   </ul>
 );
 
 Links.propTypes = {
   computedStyles: PropTypes.shape({
-    nav: PropTypes.any,
-    navItem: PropTypes.any
+    nav: PropTypes.string.isRequired,
+    navItem: PropTypes.string.isRequired,
+    navItemActive: PropTypes.string.isRequired
   }).isRequired
 };
 

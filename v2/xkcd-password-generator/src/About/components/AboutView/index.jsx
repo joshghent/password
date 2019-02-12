@@ -11,7 +11,7 @@ import stylesGenerator from "./styles";
 class AboutView extends PureComponent {
   static propTypes = {
     computedStyles: PropTypes.shape({
-      heading: PropTypes.string.isRequired
+      comic: PropTypes.string.isRequired
     }).isRequired,
     history: PropTypes.objectOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
@@ -32,10 +32,8 @@ class AboutView extends PureComponent {
 
     return (
       <div>
-        <Heading as="h1" className={computedStyles.heading}>
-          {title}
-        </Heading>
-        <img src={XKCD_COMIC} alt="xkcd-936" />
+        <Heading as="h1">{title}</Heading>
+        <img className={computedStyles.comic} src={XKCD_COMIC} alt="xkcd-936" />
       </div>
     );
   }
