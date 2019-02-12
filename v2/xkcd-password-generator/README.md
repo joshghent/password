@@ -6,7 +6,7 @@ See it live here: https://passwords.joshghent.com/
 
 > We have no claim for the passwords generated to be cryptographically secure. We do not take responsiblity for any identity theft or any other bad things.
 
-Generated passwords are NOT and will NEVER be stored on our servers.
+> Generated passwords are NOT and will NEVER be stored on our servers.
 
 Please read through this entire document to learn about getting started.
 
