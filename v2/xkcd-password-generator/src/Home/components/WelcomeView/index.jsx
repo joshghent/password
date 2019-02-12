@@ -162,7 +162,9 @@ class WelcomeView extends PureComponent {
           </Segment>
           <Segment>
             <Header as="h2">Options</Header>
-            <Header as="h6">Select options and generate password</Header>
+            <Header as="h6">
+              Select desired options, then click <i>`generate password`</i>
+            </Header>
             <Form.Group widths="equal">
               <Form.Select
                 fluid

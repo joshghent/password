@@ -1,4 +1,4 @@
-# XKCD-PASSWORD-GENERATOR
+# xkcd PASSWORD-GENERATOR
 
 A password generator based on [#936](https://xkcd.com/936/)
 
