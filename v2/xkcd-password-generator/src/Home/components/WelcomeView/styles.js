@@ -6,11 +6,9 @@ const stylesGenerator = () => ({
       top: 1.4em;
     }
   `,
-  controlContainer: css`
-    margin-top: 5em !important;
-  `,
   buttonContainer: css`
-    padding-right: 50px !important;
+    margin-right: -22px;
+    padding-right: 40px !important;
     text-align: right;
   `
 });

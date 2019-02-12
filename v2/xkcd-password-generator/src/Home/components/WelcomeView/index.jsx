@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import { Form, Grid, Message } from "semantic-ui-react";
+import { Form, Grid, Message, Segment, Header } from "semantic-ui-react";
 
 import { TOGGLE_ACTION_MAP } from "Home/constants";
 import {
@@ -17,7 +17,6 @@ class WelcomeView extends PureComponent {
   static propTypes = {
     computedStyles: PropTypes.shape({
       checkbox: PropTypes.string.isRequired,
-      controlContainer: PropTypes.string.isRequired,
       buttonContainer: PropTypes.string.isRequired
     }).isRequired,
     password: PropTypes.string.isRequired,
@@ -143,73 +142,77 @@ class WelcomeView extends PureComponent {
     return (
       <div>
         <Form>
-          <Form.Group>
-            <Form.Input
-              id="passwordField"
-              placeholder="Password"
-              width={12}
-              value={password}
-            />
-            <Form.Button
-              width={4}
-              icon="copy"
-              labelPosition="right"
-              content="Copy to Clipboard"
-              onClick={this.copyToClipboardHandler}
-            />
-          </Form.Group>
-          <Form.Group
-            widths="equal"
-            className={computedStyles.controlContainer}
-          >
-            <Form.Select
-              fluid
-              inline
-              options={options}
-              value={numWords}
-              placeholder="Please Select"
-              label="Number of words in password"
-              onChange={this.numWordsChangedHandler}
-            />
-            <Form.Checkbox
-              toggle
-              checked={mixCase}
-              data-type="mixCase"
-              label="Mix UPPERCASE and lowercase"
-              className={computedStyles.checkbox}
-              onChange={this.toggleChangedHandler}
-            />
-            <Form.Checkbox
-              toggle
-              checked={includeNumbers}
-              data-type="includeNumbers"
-              label="Include Numbers"
-              className={computedStyles.checkbox}
-              onChange={this.toggleChangedHandler}
-            />
-            <Form.Checkbox
-              toggle
-              checked={includeSpecialChars}
-              data-type="includeSpecialChars"
-              label="Include Special Characters"
-              className={computedStyles.checkbox}
-              onChange={this.toggleChangedHandler}
-            />
-          </Form.Group>
-          <Grid>
-            <Grid.Column
-              floated="right"
-              width={5}
-              className={computedStyles.buttonContainer}
-            >
-              <Form.Button
-                icon="detective"
-                labelPosition="right"
-                content="Generate Password"
-                onClick={this.generatePassword}
+          <Segment>
+            <Form.Group>
+              <Form.Input
+                id="passwordField"
+                placeholder="Password"
+                width={12}
+                value={password}
               />
-            </Grid.Column>
-          </Grid>
+              <Form.Button
+                width={4}
+                style={{ marginLeft: "23px" }}
+                icon="copy"
+                labelPosition="right"
+                content="Copy to Clipboard"
+                onClick={this.copyToClipboardHandler}
+              />
+            </Form.Group>
+          </Segment>
+          <Segment>
+            <Header as="h2">Options</Header>
+            <Header as="h6">Select options and generate password</Header>
+            <Form.Group widths="equal">
+              <Form.Select
+                fluid
+                inline
+                options={options}
+                value={numWords}
+                placeholder="Please Select"
+                label="Number of words in password"
+                onChange={this.numWordsChangedHandler}
+              />
+              <Form.Checkbox
+                toggle
+                checked={mixCase}
+                data-type="mixCase"
+                label="Mix UPPERCASE and lowercase"
+                className={computedStyles.checkbox}
+                onChange={this.toggleChangedHandler}
+              />
+              <Form.Checkbox
+                toggle
+                checked={includeNumbers}
+                data-type="includeNumbers"
+                label="Include Numbers"
+                className={computedStyles.checkbox}
+                onChange={this.toggleChangedHandler}
+              />
+              <Form.Checkbox
+                toggle
+                checked={includeSpecialChars}
+                data-type="includeSpecialChars"
+                label="Include Special Characters"
+                className={computedStyles.checkbox}
+                onChange={this.toggleChangedHandler}
+              />
+            </Form.Group>
+            <Grid>
+              <Grid.Column
+                floated="right"
+                width={5}
+                className={computedStyles.buttonContainer}
+              >
+                <Form.Button
+                  icon="detective"
+                  labelPosition="right"
+                  content="Generate Password"
+                  onClick={this.generatePassword}
+                />
+              </Grid.Column>
+            </Grid>
+          </Segment>
           <Message
             visible={showCopiedMessage}
             success
