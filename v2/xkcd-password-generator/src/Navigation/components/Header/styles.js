@@ -6,20 +6,29 @@ const stylesGenerator = () => ({
     width: 100%;
   `,
 
-  headingIcon: css`
-    text-align: center;
-    font-size: 54px !important;
+  logo: css`
+    height: 75px;
+  `,
+
+  logoContainer: css`
+    margin-left: 15%;
   `,
 
   headingTitle: css`
-    text-align: center;
-    margin-top: 0 !important;
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 1em;
+    }
   `,
 
   navContainer: css`
     position: absolute;
-    top: 0;
-    right: 10%;
+    top: 20px;
+    right: 15%;
   `
 });
 

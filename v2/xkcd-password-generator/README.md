@@ -1,4 +1,4 @@
-# XKCD-PASSWORD-GENERATOR
+# xkcd PASSWORD-GENERATOR
 
 A password generator based on [#936](https://xkcd.com/936/)
 
@@ -6,7 +6,7 @@ See it live here: https://passwords.joshghent.com/
 
 > We have no claim for the passwords generated to be cryptographically secure. We do not take responsiblity for any identity theft or any other bad things.
 
-Generated passwords are NOT and will NEVER be stored on our servers.
+> Generated passwords are NOT and will NEVER be stored on our servers.
 
 Please read through this entire document to learn about getting started.
 
@@ -14,7 +14,7 @@ Please read through this entire document to learn about getting started.
 
 - Clone the project to a local workspace of your choice. SSH Key method is reccomended.
 - **`SSH`**: `git@github.com:joshghent/password.git`
-- :point_right: [LEARN MORE](https://help.github.com/articles/connecting-to-github-with-ssh/) about creating SSH keys in GitLab.
+- :point_right: [LEARN MORE](https://help.github.com/articles/connecting-to-github-with-ssh/) about creating SSH keys in Github.
 
 ### Prerequisites
 

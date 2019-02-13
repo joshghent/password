@@ -8,7 +8,7 @@ const EMIT_IS_LOADING = "EMIT_IS_LOADING";
 // INITIAL STATE
 const initialState = {
   isLoading: false,
-  title: "About Us"
+  title: "About"
 };
 
 /**
