@@ -20,7 +20,7 @@
   "devDependencies": {
     "asset": "0.4.13",
     "chai": "4.2.0",
-    "chai-http": "4.2.0",
+    "chai-http": "4.3.0",
     "mocha": "6.0.0",
     "supertest": "3.4.0"
   }
