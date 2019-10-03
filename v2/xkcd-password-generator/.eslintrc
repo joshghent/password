@@ -9,7 +9,8 @@
     }
   },
   "env": {
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "prettier/prettier": [
@@ -20,12 +21,17 @@
     ],
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
-    "import/extensions": [2, "never", {
-      "png": "always",
-      "jpg": "always",
-      "css": "always"
-    }],
-    "linebreak-style": "off"
+    "import/extensions": [
+      2,
+      "never",
+      {
+        "png": "always",
+        "jpg": "always",
+        "css": "always"
+      }
+    ],
+    "linebreak-style": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "globals": {
     "fetch": true,
