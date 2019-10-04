@@ -19,13 +19,13 @@ Please read through this entire document to learn about getting started.
 ### Prerequisites
 
 - Node `>=10.8.0`
-- NPM `^6.2.0` -or- Yarn `^1.9.4`
+- Yarn `^1.9.4`
 
 ### Installing
 
-- From your CLI, navigate to the project root and run `npm install` -or- `yarn` and wait for installation to complete.
+- From your CLI, navigate to the project root and run `yarn` -- or -- `yarn install` and wait for installation to complete.
 
-- To launch the webserver and serve the app locally, run `npm start` -or- `yarn start`
+- To launch the webserver and serve the app locally, run `yarn start`
 
 - Drink Beer :beers:
 
@@ -47,7 +47,7 @@ Give an example
 
 - ESLint can be run with `yarn lint`.
 
-- Prettier can be run to maintain coding style. It's highly recommended to use an IDE extension to run [Prettier](https://github.com/prettier/prettier) on file saves. Otherwise, it can be run from your CLI by running `yarn prettify` -or- `npm prettify`.
+- Prettier can be run to maintain coding style. It's highly recommended to use an IDE extension to run [Prettier](https://github.com/prettier/prettier) on file saves. Otherwise, it can be run from your CLI by running `yarn prettify`.
 
 Prettier IDE extensions:
 
@@ -81,7 +81,7 @@ Prettier IDE extensions:
 
 To create an optimized production build...
 
-run `yarn build` -or- `npm build`. This will create a `/build` directory at the root of the project which contains all the compiled code and static assets to be deployed.
+run `yarn build`. This will create a `/build` directory at the root of the project which contains all the compiled code and static assets to be deployed.
 
 - Now you can serve the build folder on a production web server or run it locally to demo or test...
 
