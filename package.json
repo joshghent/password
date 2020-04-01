@@ -11,7 +11,7 @@
     "express": "4.17.1",
     "express-https-redirect": "1.0.0",
     "helmet": "3.22.0",
-    "random-words": "1.1.0"
+    "random-words": "1.1.1"
   },
   "scripts": {
     "start": "node server.js",
